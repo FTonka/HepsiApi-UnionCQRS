@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{21EC6769-E810-4E2B-B34B-093E91E55A1E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastucture", "Infrastucture", "{D7AB7346-9DE0-461C-8EF1-61BE7E018425}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{43441CF3-354A-4086-A6AE-2BC4036D3F27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiApi.Application", "HepsiApi.Application\HepsiApi.Application.csproj", "{60145BD2-5196-4AFE-8E07-FDA74F77E602}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HepsiApi.Infrastructure", "Infrastructure\HepsiApi.Infrastructure\HepsiApi.Infrastructure.csproj", "{15E5645B-B66F-4817-9793-2D6CCCA51F87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiApi.Domain", "HepsiApi.Domain\HepsiApi.Domain.csproj", "{39627BD2-5A20-4DB3-9F02-2E428F921CAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HepsiApi.Persistence", "Infrastructure\HepsiApi.Persistence\HepsiApi.Persistence.csproj", "{53AFDF96-6300-4EE9-B82D-FB40BDD331D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiApi.Infrastructure", "Infrastructure\HepsiApi.Infrastructure\HepsiApi.Infrastructure.csproj", "{15E5645B-B66F-4817-9793-2D6CCCA51F87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HepsiApi.Api", "Presentation\HepsiApi.Api\HepsiApi.Api.csproj", "{3E179B3A-DE91-4716-AA40-35AE703F9818}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiApi.Persistence", "Infrastructure\HepsiApi.Persistence\HepsiApi.Persistence.csproj", "{53AFDF96-6300-4EE9-B82D-FB40BDD331D7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9DA601F5-CB00-427A-84DB-BE4FDF0AA10D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiApi.Api", "Presentation\HepsiApi.Api\HepsiApi.Api.csproj", "{3E179B3A-DE91-4716-AA40-35AE703F9818}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiApi.Domain", "Core\HepsiApi.Domain\HepsiApi.Domain.csproj", "{D301032B-DD19-49F6-B601-AEAF4870F5EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiApi.Application", "Core\HepsiApi.Application\HepsiApi.Application.csproj", "{57DAC322-B90A-4F5E-9181-119C673C7547}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{60145BD2-5196-4AFE-8E07-FDA74F77E602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60145BD2-5196-4AFE-8E07-FDA74F77E602}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60145BD2-5196-4AFE-8E07-FDA74F77E602}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60145BD2-5196-4AFE-8E07-FDA74F77E602}.Release|Any CPU.Build.0 = Release|Any CPU
-		{39627BD2-5A20-4DB3-9F02-2E428F921CAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39627BD2-5A20-4DB3-9F02-2E428F921CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39627BD2-5A20-4DB3-9F02-2E428F921CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39627BD2-5A20-4DB3-9F02-2E428F921CAF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{15E5645B-B66F-4817-9793-2D6CCCA51F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{15E5645B-B66F-4817-9793-2D6CCCA51F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15E5645B-B66F-4817-9793-2D6CCCA51F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,16 +37,24 @@ Global
 		{3E179B3A-DE91-4716-AA40-35AE703F9818}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E179B3A-DE91-4716-AA40-35AE703F9818}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E179B3A-DE91-4716-AA40-35AE703F9818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D301032B-DD19-49F6-B601-AEAF4870F5EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D301032B-DD19-49F6-B601-AEAF4870F5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D301032B-DD19-49F6-B601-AEAF4870F5EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D301032B-DD19-49F6-B601-AEAF4870F5EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57DAC322-B90A-4F5E-9181-119C673C7547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57DAC322-B90A-4F5E-9181-119C673C7547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57DAC322-B90A-4F5E-9181-119C673C7547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57DAC322-B90A-4F5E-9181-119C673C7547}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{60145BD2-5196-4AFE-8E07-FDA74F77E602} = {21EC6769-E810-4E2B-B34B-093E91E55A1E}
-		{39627BD2-5A20-4DB3-9F02-2E428F921CAF} = {21EC6769-E810-4E2B-B34B-093E91E55A1E}
 		{15E5645B-B66F-4817-9793-2D6CCCA51F87} = {D7AB7346-9DE0-461C-8EF1-61BE7E018425}
 		{53AFDF96-6300-4EE9-B82D-FB40BDD331D7} = {D7AB7346-9DE0-461C-8EF1-61BE7E018425}
 		{3E179B3A-DE91-4716-AA40-35AE703F9818} = {43441CF3-354A-4086-A6AE-2BC4036D3F27}
+		{D301032B-DD19-49F6-B601-AEAF4870F5EE} = {9DA601F5-CB00-427A-84DB-BE4FDF0AA10D}
+		{57DAC322-B90A-4F5E-9181-119C673C7547} = {9DA601F5-CB00-427A-84DB-BE4FDF0AA10D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3BDE8F4A-1432-46FE-BD14-53CEC4CFC278}
