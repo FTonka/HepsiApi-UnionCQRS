@@ -1,0 +1,33 @@
+﻿using HepsiApi.Domain.Common;
+using HepsiApi.Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HepsiApi.Domain.Entities
+{
+    public class Category:EntityBase,IEntityBase
+    {
+        public required int Parentıd { get; set; }
+        public required string Name { get; set; }
+        public required int Priority { get; set; }
+        public ICollection<Detail> Details { get; set; }
+        public ICollection<Product> Products{ get; set; }
+
+
+        public Category()
+        {
+            
+        }
+        public Category(int parentId, string name, int priority) {
+            Parentıd = parentId;
+            Name = name;
+            Priority = priority;
+        
+        }
+        
+
+    }
+}
