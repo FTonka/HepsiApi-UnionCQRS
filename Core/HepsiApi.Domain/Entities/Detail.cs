@@ -20,5 +20,9 @@ namespace HepsiApi.Domain.Entities
             Description = description;
             CategoryId = categoryId;
         }
+        public Detail()
+        {
+            
+        }
     }
 }

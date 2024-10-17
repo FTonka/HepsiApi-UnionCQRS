@@ -10,7 +10,7 @@ namespace HepsiApi.Domain.Entities
 {
     public class Category:EntityBase,IEntityBase
     {
-        public required int Parentıd { get; set; }
+        public required int ParentId { get; set; }
         public required string Name { get; set; }
         public required int Priority { get; set; }
         public ICollection<Detail> Details { get; set; }
@@ -22,7 +22,7 @@ namespace HepsiApi.Domain.Entities
             
         }
         public Category(int parentId, string name, int priority) {
-            Parentıd = parentId;
+            ParentId = parentId;
             Name = name;
             Priority = priority;
         
